@@ -50,6 +50,10 @@ class Rectangle :
         """
         return self.length*self.height
 
+    def set_start(self, startx, starty):
+        self.start=(startx,stary)
+        
+
     def draw_shape(self):
         """
         Draw the shape, starting at 0,0.
@@ -58,7 +62,7 @@ class Rectangle :
         """
         self.turtle.clear() #Remove old drawings (if they exist)
         self.turtle.penup()
-        self.turtle.goto(0,0)
+        self.turtle.goto(self.start)
         self.turtle.pendown()
         self.turtle.goto(self.length,0)
         self.turtle.goto(self.length,self.height)
